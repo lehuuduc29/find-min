@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2 id="input"></h2>
+    <div><span>Giá trị nhỏ nhất là: </span> <span id="result"></span></div>
+</body>
+<script>
+
+    let Arr = [3, -5, 1, 8, -3, 7, 8]
+    document.getElementById("input").innerHTML = Arr
+    let min = Arr[0]
+
+    function find_Min() {
+
+        for (let i = 1; i < Arr.length; i++) {
+            if(min > Arr[i]) {
+                min = Arr[i]
+                console.log(min)
+            }
+            document.getElementById("result").innerHTML = min
+        }
+    }
+
+    find_Min()
+
+</script>
+
+</html>
